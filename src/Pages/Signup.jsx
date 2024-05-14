@@ -36,7 +36,7 @@ function Signup(props){
 
 
     return(
-       <div className=" bg-black p-10">
+       <div className=" bg-black p-7 md:p-10">
         <div className="border rounded-md bg-[#efefef] p-10">
         <h1 className="text-3xl font-medium">Hey Hi 👋</h1>
         <p>Sign Up here :)</p>
@@ -48,9 +48,13 @@ function Signup(props){
         <button className=" bg-[#fca201] rounded-md p-1 w-24 text-center" onClick={addUser}>Sign Up</button>
 
         <p>Already have an account ? <Link to={'/'} className=" underline hover:text-red-600">Login</Link> </p>
+        <br />
+        <p className=" text-gray-700">Note :- This ToDo App is just an local storage one, so your username & password will work only until you close the browser, once you reload or close the browser then you will need to create Again !</p>
         </div>
         
+        
         </div>
+        
        </div>
     )
 }

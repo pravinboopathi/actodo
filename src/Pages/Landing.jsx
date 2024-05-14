@@ -5,13 +5,13 @@ import { useLocation } from "react-router-dom"
 
 function Landing(){
 
-    const data = useLocation()
+   const data = useLocation()
 
     return(
-        <div className=" bg-black p-16 ">
+        <div className=" bg-black p-7 md:p-14">
       
-      <div className=" bg-[#efefef] p-10 border rounded-md">
-        <Header name={data.state.user}/>
+      <div className=" bg-[#efefef] border rounded-md p-8 md:p-10 ">
+        <Header name = {data.state.username}/>
         
         {/* card components */}
         <div className=" flex justify-between gap-7 my-5 flex-wrap text-center">
@@ -28,6 +28,7 @@ function Landing(){
 
 
       </div>
+      <p className=" text-white text-center"></p>
     </div>
     )
 }

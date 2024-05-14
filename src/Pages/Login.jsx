@@ -22,7 +22,7 @@ function Login(props) {
         const foundUser = users.find(user => user.username === eusername && user.password === epassword);
         if (foundUser) {
             console.log("Login Success");
-            navigate('/Landing', {state:{user:eusername}})
+            navigate('/Landing', {state:{username:eusername}})
         } 
         
         else {
@@ -32,7 +32,7 @@ function Login(props) {
     }
 
     return (
-        <div className=" bg-black p-10">
+        <div className=" bg-black p-7 md:p-10">
             <div className="border rounded-md bg-[#efefef] p-10">
                 <h1 className="text-3xl font-medium">Hey Hi 👋</h1>
                 {
@@ -60,9 +60,19 @@ function Login(props) {
                    
 
                     <p>Don't have an account? <Link to={'/signup'} className=" underline hover:text-red-600">Sign Up</Link> </p>
+                    <br />
+
+                    {
+                        ruser?"":<div><p>Test Login:-</p>
+                        <p>Username:admin</p>
+                        <p>Password:123</p></div>
+                    }
+                    
                 </div>
 
             </div>
+
+           <p className=" text-gray-300">Dev - Pravin boopathi</p>
         </div>
     );
 }
